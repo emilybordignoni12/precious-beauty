@@ -1,0 +1,12 @@
+/* Scale the desktop title against its Bootstrap column, not the viewport. */
+@media (min-width: 992px) {
+  .hero-copy {
+    container-type: inline-size;
+    padding-right: clamp(1rem, 3vw, 3rem);
+  }
+
+  .hero-copy h1 {
+    font-size: min(10rem, 16cqi);
+    line-height: 0.9;
+  }
+}
