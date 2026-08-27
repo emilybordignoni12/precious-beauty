@@ -14,6 +14,7 @@ describe('publicação estática no GitHub Pages', () => {
     const workflow = readFileSync(resolve('.github/workflows/deploy-pages.yml'), 'utf8')
     expect(workflow).toContain('actions/deploy-pages')
     expect(workflow).toContain('NEXT_PUBLIC_BASE_PATH')
+    expect(workflow).toContain('enablement: true')
     expect(workflow).not.toMatch(/token:\s*['"][^$]/)
   })
 
