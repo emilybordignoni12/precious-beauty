@@ -1,0 +1,17 @@
+import Image from 'next/image'
+import { MapPin } from 'lucide-react'
+import { FaqAccordion } from '@/components/ui/FaqAccordion'
+import { WhatsAppLink } from '@/components/ui/WhatsAppLink'
+import { faq, generalMessage } from '@/data/content'
+import { media } from '@/data/media'
+import { withBasePath } from '@/lib/paths'
+
+export function FaqPortfolio() {
+  return <><section id="duvidas" className="section-space paper-section"><div className="container"><div className="row"><div className="col-lg-4"><p className="eyebrow brown">14 · DÚVIDAS</p><h2>Você pode chegar<br/><em>sem todas as respostas.</em></h2><p>Eu cuido para que cada escolha faça sentido em você.</p></div><div className="col-lg-7 offset-lg-1"><FaqAccordion items={faq}/></div></div></div></section>
+  <section id="portfolio" className="section-space portfolio-section"><div className="container"><p className="eyebrow gold">15 · PORTFÓLIO</p><div className="row"><div className="col-lg-7"><h2>Veja a Precious Beauty<br/><em>acontecendo.</em></h2></div><div className="col-lg-4 offset-lg-1"><p>Noivas. Madrinhas. Convidadas. Produções sociais. Diferentes rostos, diferentes histórias.</p><p>Cada rosto conta uma história. Cada produção revela uma mulher com identidade própria.</p></div></div><div className="portfolio-grid">{media.clients.map((item,index)=><figure key={item.src} className={`portfolio-item item-${index+1}`}><Image src={withBasePath(item.src)} alt={item.alt} fill sizes="(max-width: 767px) 92vw, 45vw" /><figcaption>PRECIOUS BEAUTY <span>0{index+1}</span></figcaption></figure>)}</div></div></section></>
+}
+
+export function ContactFooter() {
+  return <><section id="agendar" className="section-space contact-section"><div className="container"><div className="row align-items-center"><div className="col-lg-7"><p className="eyebrow gold">16 · AGENDAR SUA EXPERIÊNCIA</p><h2>Vamos criar sua<br/><em>Precious Beauty?</em></h2><p className="lead-serif">Se você tem uma ocasião especial chegando, quero conhecer um pouco mais sobre ela.</p><p>Envie seu nome, data do evento, horário em que precisa estar pronta, tipo de evento, local e serviço ou experiência desejada.</p><WhatsAppLink message={generalMessage} className="button button-gold">Falar comigo pelo WhatsApp</WhatsAppLink></div><div className="col-lg-4 offset-lg-1 contact-aside"><p>Para noivas, quanto antes você entrar em contato, melhor podemos planejar todos os detalhes da produção e garantir um atendimento tranquilo.</p><hr/><p>Se ainda não sabe qual serviço escolher, não tem problema. Conte o que está planejando e eu ajudo a encontrar a melhor opção.</p></div></div></div></section>
+  <footer className="site-footer"><div className="container"><div className="footer-wordmark">PRECIOUS <em>BEAUTY</em></div><div className="row footer-details"><div className="col-md-5"><p>Maquiagem para mulheres que desejam valorizar sua imagem, revelar sua identidade e viver momentos especiais com confiança.</p></div><div className="col-md-3 offset-md-1"><strong>Emily Bordignoni</strong><span>Especialista em Maquiagem</span><span><MapPin size={14}/> Fernandópolis — SP</span></div><div className="col-md-3"><span>Atendimento no espaço e a domicílio.</span></div></div><blockquote>“Tudo quanto fizerdes, fazei-o de todo o coração, como ao Senhor.”<cite>Colossenses 3:23</cite></blockquote><div className="footer-bottom"><span>PRECIOUS BEAUTY © {new Date().getFullYear()}</span><em>Embelezamento com propósito.</em></div></div></footer></>
+}
