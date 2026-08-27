@@ -1,7 +1,8 @@
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { withBasePath } from './paths'
 
 describe('withBasePath', () => {
+  beforeEach(() => delete process.env.NEXT_PUBLIC_BASE_PATH)
   afterEach(() => delete process.env.NEXT_PUBLIC_BASE_PATH)
 
   it('mantém caminho absoluto quando o site está na raiz', () => {
