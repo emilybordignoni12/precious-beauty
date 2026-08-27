@@ -14,7 +14,8 @@ describe('site Precious Beauty', () => {
   it('inclui toda a jornada de conteúdo e os serviços', () => {
     render(<Home />)
     expect(screen.getByRole('heading', { name: /Quem é Emily.*Bordignoni/i })).toBeInTheDocument()
-    for (const title of ['Meu propósito', 'Precious Beauty', 'Maquiagem Social', 'Maquiagem para Noivas', 'Atendimento Coletivo', 'Precious Beauty Experience', 'Precious Moments', 'Como funciona', 'Onde atendo', 'Pequenos cuidados', 'Agendamento', 'Dúvidas', 'Portfólio']) {
+    expect(screen.getByRole('heading', { name: /Como.*funciona o.*atendimento/i })).toBeInTheDocument()
+    for (const title of ['Meu propósito', 'Precious Beauty', 'Maquiagem Social', 'Maquiagem para Noivas', 'Atendimento Coletivo', 'Precious Bride Experience', 'Precious Moments', 'Onde atendo', 'Pequenos cuidados', 'Agendamento', 'Dúvidas', 'Portfólio']) {
       expect(screen.getAllByText(title, { exact: false }).length).toBeGreaterThan(0)
     }
   })

@@ -1,0 +1,8 @@
+.journeyCopy {
+  container-type: inline-size;
+}
+
+.journeyCopy h2 {
+  font-size: min(6.8rem, 15.5cqi);
+  line-height: 1;
+}

@@ -36,10 +36,10 @@ export const services: Service[] = [
 
 export const experiences: Experience[] = [
   {
-    title: 'Precious Beauty Experience', subtitle: 'O dia da noiva, vivido por inteiro.', image: '/images/clientes/IMG_3302.JPG.jpeg',
+    title: 'Precious Bride Experience', subtitle: 'O dia da noiva, vivido por inteiro.', image: '/images/clientes/IMG_3302.JPG.jpeg',
     description: ['O casamento começa muito antes do altar. Esta experiência transforma as horas antes do “sim” em uma lembrança especial ao lado das mulheres que a noiva escolheu.', 'Noiva, madrinhas, mãe e sogra são recebidas em ambiente reservado e confortável para conversar, rir, se emocionar, compartilhar uma refeição e brindar.', 'Não é sobre protocolos. É sobre criar um dia com significado — um momento que passe devagar o suficiente para ser aproveitado.'],
     highlights: ['Maquiagem personalizada da noiva', 'Maquiagem das acompanhantes', 'Lanches naturais e bebidas', 'Bolo e brinde', 'Cabeleireira de confiança, mediante organização prévia'],
-    message: 'Olá, Emily! Conheci a Precious Beauty Experience pelo site e gostaria de conversar sobre meu casamento, a quantidade de acompanhantes, disponibilidade e detalhes da experiência.',
+    message: 'Olá, Emily! Conheci a Precious Bride Experience pelo site e gostaria de conversar sobre meu casamento, a quantidade de acompanhantes, disponibilidade e detalhes da experiência.',
   },
   {
     title: 'Precious Moments', subtitle: 'Um momento especial antes de um momento inesquecível.', image: '/images/clientes/IMG_3304.JPG.jpeg',
@@ -62,7 +62,7 @@ export const preparation = [
   ['Pele', 'Venha com a pele limpa e sem maquiagem. Mantenha sua rotina habitual de skincare, evite produtos novos e procedimentos que sensibilizem a pele. Se usa ácidos ou faz tratamento dermatológico, siga seu profissional.'],
   ['No dia', 'Faça uma refeição leve, beba água, venha sem maquiagem, evite procedimentos faciais próximos ao evento, separe referências e organize acessórios e itens da produção.'],
   ['Roupa', 'Prefira roupa fácil de retirar sem passar pelo rosto ou venha já vestida. Uma foto do look ajuda a criar uma beleza coerente com a cor e o formato da roupa.'],
-  ['Cabelo', 'Se também fará o cabelo no local, alinhe o cronograma previamente. Emily não realiza penteados; na Precious Beauty Experience, você pode levar sua cabeleireira.'],
+  ['Cabelo', 'Se também fará o cabelo no local, alinhe o cronograma previamente. Emily não realiza penteados; na Precious Bride Experience, você pode levar sua cabeleireira.'],
   ['Referências', 'Você pode mostrar maquiagens que gosta. Elas ajudam a compreender preferências e serão adaptadas aos seus próprios traços.'],
   ['Horário', 'Pontualidade é essencial. Chegar no horário permite que a produção aconteça com calma e respeite o cronograma do evento.'],
 ].map(([title, text]) => ({ title, text }))
@@ -83,9 +83,9 @@ export const faq: FaqItem[] = [
   ['E se eu não gostar de maquiagem muito forte?', ['A intensidade não vem de uma fórmula. Entendemos seus limites e preferências para criar presença, sofisticação e definição na medida certa.']],
   ['E se minha pele tiver textura, manchas ou alguma característica que me incomoda?', ['A preparação considera as características da sua pele e busca acabamento bonito e adequado, sem deixar de respeitar sua individualidade.']],
   ['Tenho medo de a maquiadora atrasar meu cronograma.', ['O horário é planejado a partir do momento em que você precisa estar pronta. Você não precisa passar o dia olhando para o relógio.']],
-  ['E se eu precisar me maquiar junto com várias pessoas?', ['Para noivas e madrinhas existe a Precious Beauty Experience. Para convidadas e outras mulheres do evento, existe a Precious Moments. Quantidade e cronograma são planejados antes.']],
+  ['E se eu precisar me maquiar junto com várias pessoas?', ['Para noivas e madrinhas existe a Precious Bride Experience. Para convidadas e outras mulheres do evento, existe a Precious Moments. Quantidade e cronograma são planejados antes.']],
   ['Não sou madrinha, mas também não quero me arrumar sozinha.', ['O Precious Moments foi criado justamente para convidadas, amigas e familiares que desejam se preparar juntas.']],
-  ['Minha cabeleireira é outra profissional. Posso levar?', ['Sim. Na Precious Beauty Experience, a noiva pode levar sua cabeleireira de confiança, mediante alinhamento prévio.']],
+  ['Minha cabeleireira é outra profissional. Posso levar?', ['Sim. Na Precious Bride Experience, a noiva pode levar sua cabeleireira de confiança, mediante alinhamento prévio.']],
   ['Moro em outra cidade. Preciso ir até Fernandópolis?', ['Não necessariamente. Também realizo atendimentos a domicílio e em outras cidades, conforme disponibilidade e logística.']],
   ['Por que preciso pagar uma taxa para reservar?', ['Quando você escolhe um horário, esse período sai da agenda e fica exclusivamente destinado à sua produção. A taxa confirma essa reserva e não é um valor adicional ao serviço.']],
   ['E se eu ainda estiver decidindo e quiser deixar o horário reservado?', ['Como existe uma quantidade limitada de atendimentos por dia, horários só ficam bloqueados após a confirmação da reserva.']],
