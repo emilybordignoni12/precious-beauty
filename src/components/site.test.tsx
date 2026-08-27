@@ -3,6 +3,17 @@ import { describe, expect, it } from 'vitest'
 import Home from '@/app/page'
 
 describe('site Precious Beauty', () => {
+  it('oferece contato flutuante acessível pelo WhatsApp da Emily', () => {
+    render(<Home />)
+    const link = screen.getByRole('link', { name: 'Fale com Emily pelo WhatsApp' })
+    const destination = new URL(link.getAttribute('href')!)
+    expect(destination.origin).toBe('https://wa.me')
+    expect(destination.pathname).toBe('/5517996649423')
+    expect(destination.searchParams.get('text')).toContain('gostaria de solicitar um atendimento')
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+  })
+
   it('apresenta a marca, posicionamento e chamadas principais', () => {
     render(<Home />)
     expect(screen.getByRole('heading', { level: 1, name: /Emily Bordignoni/i })).toBeInTheDocument()
