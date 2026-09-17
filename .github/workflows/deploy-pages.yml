@@ -22,28 +22,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
-      - name: Definir caminho do repositório
-        shell: bash
-        run: |
-          REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          OWNER="${GITHUB_REPOSITORY%/*}"
-          if [ "$REPO_NAME" = "$OWNER.github.io" ]; then
-            echo "NEXT_PUBLIC_BASE_PATH=" >> "$GITHUB_ENV"
-            echo "NEXT_PUBLIC_SITE_URL=https://$OWNER.github.io" >> "$GITHUB_ENV"
-          else
-            echo "NEXT_PUBLIC_BASE_PATH=/$REPO_NAME" >> "$GITHUB_ENV"
-            echo "NEXT_PUBLIC_SITE_URL=https://$OWNER.github.io/$REPO_NAME" >> "$GITHUB_ENV"
-          fi
-      - run: npm test
-      - run: npm run build
+      - name: Preparar site com fotos autorais
+        run: node build-site.cjs
       - uses: actions/configure-pages@v5
         with:
           enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./site-output
   deploy:
     environment:
       name: github-pages
